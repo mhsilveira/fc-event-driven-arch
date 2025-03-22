@@ -4,5 +4,5 @@
 GET {{baseUrl}}/health
 
 ### Exemplos de uso
-@account_id = a2
+@account_id = 1
 GET {{baseUrl}}/balances/{{account_id}}
