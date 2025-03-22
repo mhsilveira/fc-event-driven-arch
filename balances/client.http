@@ -1,0 +1,8 @@
+@baseUrl = http://localhost:3003
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Exemplos de uso
+@account_id = a2
+GET {{baseUrl}}/balances/{{account_id}}

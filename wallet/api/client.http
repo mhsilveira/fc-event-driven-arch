@@ -3,8 +3,8 @@ POST http://localhost:8080/clients HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Chris Redfield",
-    "email": "chris.redfield@stars.com"
+    "name": "Albert Wesker",
+    "email": "albert.wesker@stars.com"
 }
 
 ###
@@ -13,7 +13,7 @@ POST http://localhost:8080/accounts HTTP/1.1
 Content-Type: application/json
 
 {
-    "client_id": "9673a570-d3e7-4e88-a989-3b437e61c77b"
+    "client_id": "1"
 }
 
 ###
@@ -22,7 +22,7 @@ POST http://localhost:8080/transactions HTTP/1.1
 Content-Type: application/json
 
 {
-    "account_id_from": "a1",
-    "account_id_to": "a2",
-    "amount": 499
+    "account_id_from": "1",
+    "account_id_to": "2",
+    "amount": 500
 }

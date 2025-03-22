@@ -16,3 +16,9 @@ Requisitos para entrega:
 ## PARA ACESSAR O MYSQL
 Entre via shell no container MySQL desejado (usarei o wallet de exemplo) e utilize o comando abaixo, passando a senha cadastrada no Compose.
 `mysql -u root -p wallet`
+
+Se quiser algo mais simples pra ser executado fora do container, utilize o exemplo abaixo para montar sua query e não precisar entrar na shell diretamente:
+`docker exec -it mysql mysql -u root -p -e "SHOW DATABASES;"`
+
+## PARA ACESSAR O COMMAND CENTER
+Vá para http://localhost:9021/clusters

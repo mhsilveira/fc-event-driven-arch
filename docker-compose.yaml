@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   wallet-app:
     build: .
@@ -15,11 +13,12 @@ services:
       - app-network
 
   balances-app:
-    build: .
+    build: ./balances
     container_name: balances
     platform: linux/amd64
     volumes:
       - ./balances:/app
+       - /app/node_modules
     ports:
       - 3003:3003
     depends_on:
@@ -46,6 +45,8 @@ services:
     image: mysql:5.7
     container_name: balances-mysql
     platform: linux/amd64
+    volumes:
+      - ./balances/scripts:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: balances
