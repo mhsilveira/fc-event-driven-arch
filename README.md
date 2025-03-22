@@ -20,5 +20,10 @@ Entre via shell no container MySQL desejado (usarei o wallet de exemplo) e utili
 Se quiser algo mais simples pra ser executado fora do container, utilize o exemplo abaixo para montar sua query e não precisar entrar na shell diretamente:
 `docker exec -it mysql mysql -u root -p -e "SHOW DATABASES;"`
 
+## PARA INICIAR O SERVIÇO WALLET
+Basta executar o shell no container que está rodando o wallet-app e navegar para o diretório que se encontra o main.go:
+
+`cd /cmd/walletcore && go run main.go `
+
 ## PARA ACESSAR O COMMAND CENTER
 Vá para http://localhost:9021/clusters
